@@ -1,0 +1,175 @@
+
+package hospital1;
+
+    import java.awt.*;
+    import javax.swing.*;
+    import java.awt.event.*;
+    import java.sql.*;
+    import java.util.logging.Level;
+    import javax.swing.table.DefaultTableModel;
+    import javax.swing.table.TableRowSorter;
+
+
+
+public class Hospital1 extends Frame implements ActionListener,MouseListener,WindowListener {
+        JFrame Login=new JFrame("Login");
+        JLabel L=new  JLabel("WELCOME");
+        JLabel L1=new JLabel("Username");
+        JLabel L2=new JLabel("Password");
+        
+        
+        JTextField T=new JTextField();///////////////////////////USERNAME
+        JPasswordField TP=new JPasswordField();
+        
+        
+        JButton B=new JButton("Login");
+        JButton exit=new JButton("Exit");
+
+Hospital1  (){ 
+    Login.setLayout(null);
+            Login.setBounds(40, 100, 1200, 800);
+            
+            
+            
+            L.setBounds(520, 60, 250, 200);
+            L.setFont(new Font("Impact",Font.TRUETYPE_FONT,50));
+            L.setForeground(Color.WHITE);
+            L.setBackground(Color.BLACK);
+            Login.add(L);
+            
+            L1.setBounds(380, 210, 150, 100);
+            L1.setFont(new Font("Impact",Font.PLAIN,30));
+            L1.setForeground(Color.WHITE);
+            Login.add(L1);
+            
+            T.setBounds(380, 280, 200, 25);
+            Login.add(T);
+            
+            L2.setBounds(380, 300, 150, 100);
+            L2.setFont(new Font("Impact",Font.PLAIN,30));
+            L2.setForeground(Color.WHITE);
+            Login.add(L2);
+            
+            TP.setBounds(380, 370, 200, 25);
+            Login.add(TP);
+            
+            exit.setBounds(700, 450, 100, 50);
+            exit.addActionListener(this);
+            exit.setFont(new Font("impact",Font.PLAIN,20));
+            Login.add(exit);
+            
+            B.setBounds(380, 450, 120, 50);
+            B.addActionListener(this);
+            B.setFont(new Font("impact",Font.PLAIN,20));
+            Login.add(B);
+            
+            
+            
+            
+            
+            ImageIcon logBG=new ImageIcon("C:\\Users\\tabarak\\Desktop\\Image-Group-Chinese-Hospital-Door-Signs (1).jpg");
+            JLabel LBG=new JLabel("",logBG,JLabel.CENTER);
+            LBG.setSize(1200, 800);
+            Login.add(LBG);
+            
+            
+            
+            //Login.addWindowListener(this);
+            addWindowListener(this);
+            Login.setVisible(true);
+ 
+   }
+
+   
+    public static void main(String[] args) {
+       Hospital1 h=new Hospital1();
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+            if(ae.getSource()==B){
+            if(T.getText().equals("ahmed") && TP.getText().equals("ahmed")){
+                JOptionPane.showMessageDialog(null, "Welcome ahmed..!");
+                Login.setVisible(false);
+                Secc ch=new Secc();
+                JOptionPane.showMessageDialog(null, "Welcome to our  hospital choose what you want");
+            }
+          /*  else if(T.getText().equals("admin") && TP.getText().equals("admin")){
+                JOptionPane.showMessageDialog(null, "Welcome admin..!");
+            }*/
+            
+       
+        }
+         if(ae.getSource()==exit){
+            JOptionPane.showMessageDialog(this, " Are you want to exit..!");
+            System.exit(0);
+        }
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent me) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void mousePressed(MouseEvent me) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent me) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent me) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void mouseExited(MouseEvent me) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void windowOpened(WindowEvent we) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void windowClosing(WindowEvent we) {
+    {
+        System.exit(0);
+    }
+    
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void windowClosed(WindowEvent we) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void windowIconified(WindowEvent we) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void windowDeiconified(WindowEvent we) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void windowActivated(WindowEvent we) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void windowDeactivated(WindowEvent we) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+   
+    
+}
